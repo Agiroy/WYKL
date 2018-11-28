@@ -1,0 +1,142 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+img{
+	text-align: center;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+html,body{
+	width: 100%;
+	background: #ccc;
+}
+/*header*/
+.header{
+	width: 100%;
+	height: 30px;
+	background: #000;
+}
+.header ul:nth-child(1){
+	display: inline-block;
+	margin-left: 170px;
+	height: 30px;
+	width: 261px;
+}
+.header>ul:nth-child(2){
+	float: right;
+	display: inline-block;
+	margin-right: 200px;
+	height: 30px;
+	width: 576px;
+}
+.header ul:nth-child(1)>li{
+	float: left;
+	line-height: 30px;
+	width: 64px;
+	text-align: center;
+}
+.header>ul:nth-child(2)>li{
+	float: left;
+	line-height: 30px;
+	width: 80px;
+	text-align: center;
+}
+.iconfont{
+	vertical-align: middle;
+}
+.xiala li{
+	width: 80px;
+}
+.xiala{
+	margin-right: 30px;
+	display: none;
+}
+.header a{
+	font-size: 11px;
+	color: #999999;
+}
+.ol:hover a{
+	color: #fff;
+}
+.lo{
+	position: relative;
+}
+.lo:hover{
+	background: #fff;
+}
+.lo:hover>a{
+	color: red;
+}
+.header>ul:nth-child(2)>li:hover .xiala{
+	display: block;
+}
+.qq:hover a{
+	color: #fff;
+}
+.qq img{
+	display: none;
+}
+.qq:hover img{
+	display: block;
+}
+.main{
+	width: 100%;
+}
+.main .banner{
+	width: 100%;
+	height: 140px;
+	border-top:1px solid #ededee ;
+	background: #fff;
+}
+.banner img{
+	margin: 20px 0 0 170px;
+	float: left;
+}
+.box{
+	display: inline-block;
+	width: 510px;
+	height: 36px;
+	border: 2px solid #ff2337;
+	border-radius: 25px;
+	margin:25px 0 0 135px;
+}
+.box i{
+	line-height: 36px;
+	margin-left: 5px;
+}
+.box #txt{
+	border: 0;
+	outline: none;
+	width: 300px;
+}
+.box #btn{
+	width: 52px;
+	border-radius: 25px;
+	height: 36px;
+	border: 0;
+	float: right;
+	
+	outline: none;
+	background:#ff0610 url("https://haitao.nos.netease.com/6e4da089-9347-4dc2-be19-4962832a4a5c.png?imageView&thumbnail=20x0&quality=85&v=1") no-repeat center;
+}
+.gouwu{
+	width: 110px;
+	height: 36px;
+	border: 2px solid #ff2337;
+	float: right;
+	border-radius: 25px;
+	margin: 25px 250px 0 0;
+}
+.gouwu i{
+	line-height: 36px;
+	margin-left: 15px;
+}
+.gouwu a{
+	color: #000;
+	margin-left: 5px;
+}
