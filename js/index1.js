@@ -68,9 +68,72 @@ $(".fenglei").mouseover(function(){
 }).mouseout(function(){
 	$(".daohang3").hide();
 })
-//$dh.mouseover(function(){
-//	var index=$(this).index();
-//	console.log(index);
-//	$dh.eq(index).css({"background":"white","color" : "red"}).siblings().css({"background":"#ff2851","color":"white"});
-//	$dh.eq(index).a.css("color","red").siblings().css("color","white");
-//})
+$("#txt").keyup(function(){
+	$("#u").css("display","block");
+})
+$(document).click(function(){
+	$("#u").css("display","none");
+})
+$(".q4 li").mouseenter(function(){
+	var index=$(this).index();
+	//$(this).css("height",300);
+	$(this).find("span").css({
+		"overflow":"visible",
+		"white-space":"normal"
+	});
+	$(this).css({"zIndex":2,"borderColor":"red"})
+}).mouseleave(function(){
+	var index=$(this).index();
+	//$(this).css("height",258);
+	$(this).find("span").css({
+		"text-overflow":"ellipsis",
+		"white-space":"nowrap",
+		"overflow":"hidden"
+		
+	});
+})	
+$(".louti li").click(function(){
+	var index=$(this).index();
+	$("html").stop().animate({scrollTop:($(".q4").eq(index-1).offset().top)},1500)
+})
+$(".louti li").mouseover(function(){
+	var index=$(this).index();
+	//console.log(this)
+	//console.log(index)
+	$(".louti li").eq(index-1).css({"background":"black","opacity":0.3}).siblings().css({"background":"#ff1e32","opacity":1});
+})
+
+
+$(window).scroll(function(){
+	if ($("html").scrollTop()>=$(".q1").offset().top&&$("html").scrollTop()<=$(".q5").offset().top) {
+		$(".louti").css("display","block");
+	}else{
+		$(".louti").css("display","none");
+	}
+	var index=0;
+		var arr=[];
+		$(".q4").each(function(ind){
+			arr.push(Math.abs($(".q4").eq(ind).offset().top-$("html").scrollTop()));
+		})
+		var min=arr[0];
+		for (var i=0;i<arr.length;i++) {
+			if (arr[i]<=min) {
+				index=i;
+				min=arr[index];
+			}
+		}
+		
+		$(".louti li").eq(index).css({"background":"black","opacity":0.3}).siblings().css({"background":'#ff1e32',"opacity":1})
+		//console.log(index)
+})
+$(".louti .two").click(function(){
+	$("html").stop().animate({scrollTop:0},1500)
+})
+$(".gg li").mouseover(function(){
+	var index=$(this).index();
+	//console.log(index)
+	$(".zz li").eq(index).css("display","block").siblings().css("display","none");
+}).mouseout(function(){
+	var index=$(this).index();
+	$(".zz li").eq(index).css("display","none");
+})

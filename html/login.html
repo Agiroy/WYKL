@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+	</head>
+	<body>
+		<!------header------>
+		<div class="header">
+			<div>
+				<a href="#"><img src="../img/banner.png"/></a>
+				<div></div>
+			</div>
+		</div>
+		<!------main------>
+		<div class="main">
+			<img src="../img/banner.jpg"/>
+			<div class="dl">
+				<div class="q1">
+					<ul>
+						<li>手机号登录</li>
+						<li>邮箱登录</li>
+					</ul>
+				</div>
+				<div class="zz">
+					<div class="q2">
+						<img src="../img/z2.jpg"/>
+						<input type="text" id="uname" name="uname" placeholder="请输入手机号"/>
+					</div>
+					<div class="q3">
+						<img src="../img/z3.jpg"/>
+						<input type="text" id="upwd" name="upwd" placeholder="请输入密码"/>
+					</div>
+					<input type="button" value="登录" id="sub"/>
+					<div class="q4">
+						<input type="checkbox" name="" id="cb" value="" checked="checked"/>
+						<span>10天免登录</span>
+						<i>遇到问题？</i>
+					</div>
+				</div>
+				<div class="ma">
+					<ul>
+						<li><a href="#"><img src="../img/m1.jpg"/></a></li>
+						<li><a href="#"><img src="../img/m2.jpg"/></a></li>
+						<li><a href="#"><img src="../img/m3.jpg"/></a></li>
+						<li><a href="#"><img src="../img/m4.jpg"/></a></li>
+					</ul>
+					<span><a href='http://127.0.0.1/WYKL/html/register.html'><b>手机快捷注册</b></a><img src="../img/j.jpg" alt="" /></span>
+				</div>
+			</div>
+		</div>
+		<!------footer------>
+		<div class="footer">
+			<ul class="ww">
+				<li><a href="#">About NetEase</a></li>
+				<li><a href="#">公司简介</a></li>
+				<li><a href="#">联系方法</a></li>
+				<li><a href="#">友情链接</a></li>
+				<li><a href="#">招聘信息</a></li>
+				<li><a href="#">客户服务</a></li>
+				<li><a href="#">隐私政策</a></li>
+				<li><a href="#">网络营销</a></li>
+				<li><a href="#">网易考拉</a></li>
+			</ul>
+			<div class="last1">
+					<span>网络文化经营许可证：浙网文[2016]0155-055号</span>
+					<span>增值电信业务经营许可证：浙B2-20160288</span>
+					<span>自营经营者信息</span>
+					<span>（浙）网械平台备字[2018]第00007号 </span>
+			</div>
+			<div class="last2">
+					<img src="../img/12.jpg"/> <span>浙公网安备 33010802002216号 </span>
+					<span>网易公司版权所有©1997-2018</span>
+					<span>互联网药品信息服务资格证书编号（浙）-2017-0027 </span>
+					<span>浙ICP备16011229号-6</span>
+				</div>
+			<div class="last3">
+					<img src="../img/13.jpg"/>
+			</div>	
+		</div>
+	</body>
+</html>
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script src="public.js"></script>
+<script type="text/javascript">
+	var obtn=$id("sub"),
+		oun=$id("uname"),
+		opw=$id("upwd");
+		obtn.onclick=function(){
+			var str=`status=login&uname=${uname.value}&upwd=${upwd.value}`;
+			var ajax=null;
+			if (XMLHttpRequest) {
+				ajax=new XMLHttpRequest();
+			}else{
+				ajax=new ActiveXObject();
+			}
+			ajax.open("GET","http://127.0.0.1/WYKL/html/1.php?"+str);
+			ajax.send();
+			ajax.onreadystatechange=function(){
+				if (ajax.readyState==4&&ajax.status==200) {
+//					console.log(ajax.responseText);
+					if (ajax.responseText==1) {
+						alert("登录成功");
+						location.href="http://127.0.0.1/WYKL/html/index1.html?uname="+oun.value;
+					}else if (ajax.responseText==2) {
+						alert("密码错误");
+					}else if (ajax.responseText==0) {
+						alert("用户名错误");
+					}
+				}
+			}
+		}
+</script>

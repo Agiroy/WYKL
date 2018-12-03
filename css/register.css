@@ -1,0 +1,228 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+img{
+	text-align: center;
+	vertical-align: middle;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+/*header*/
+.header{
+	width: 100%;
+	height: 100px;
+}
+.header div{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+}
+.header div a{
+	height: 100%;
+	margin-top: 20px;
+	float: left;
+}
+.header div div{
+	width: 504px;
+	height: 39px;
+	background: url(../img/z1.JPG) no-repeat;
+	float: right;
+	margin-top: 30px;
+}
+.main{
+	width: 100%;
+	height: 520px;
+	/*position: absolute;*/
+}
+.main>img{
+	width: 100%;
+	height: 100%;
+}
+.main .zc{
+	width: 352px;
+	height: 470px;
+	background: #f8f8f8;
+	border: 1px solid gray;
+	position: absolute;
+	left: 850px;
+	top: 150px;
+}
+.main .zc .q1{
+	width: 100%;
+	height: 50px;
+}
+.main .zc .q1 b{
+	color: #e31436;
+	line-height: 50px;
+	margin-left: 40px;
+}
+.main span{
+	float: right;
+	margin-top: 13px;
+}
+.main .zc .q1 #y1 a{
+	color: #000;
+}
+.main .zc .q1 #y2 a{
+	color: #51b8f1;
+	margin-right: 40px;
+}
+.main .zc .q1 a{
+	font-size: 10px;
+}
+.main .zc form{
+	width: 100%;
+	height: 339px;
+	border-top: 1px solid gray;
+	background: #fff;
+}
+.main .zc form .w1{
+	border: 1px solid #f8f8f8;
+	width: 270px;
+	height: 36px;
+	margin-top: 40px;
+	margin-left: 40px;
+}
+.main .zc form .w1 img{
+	margin-left: 10px;
+}
+.main .zc form #uname{
+	height: 36px;
+	outline: none;
+	border: none;
+}
+.main .zc form .w4{
+	border: 1px solid #f8f8f8;
+	width: 270px;
+	height: 36px;
+	margin-top: 20px;
+	margin-left: 40px;
+}
+.main .zc form .w4 img{
+	margin-left: 10px;
+}
+.main .zc form .w2{
+	border: 1px solid #f8f8f8;
+	width: 270px;
+	height: 36px;
+	margin-top: 20px;
+	margin-left: 40px;
+}
+.main .zc form .w2 input{
+	outline: none;
+	border: none;
+	height: 100%;
+} 
+.main .zc form .w2 span{
+	width: 101px;
+	height: 36px;
+	float: right;
+	background: url(../img/yzm.png);
+	margin: 0;
+	text-align: center;
+	font-size: 20px;
+	line-height: 36px;
+}
+.main .zc form #upwd{
+	height: 36px;
+	outline: none;
+	border: none;
+	width: 100px;
+}
+.main .zc form .w3{
+	margin-left: 40px;
+	margin-top: 10px;
+	height: 40px;
+}
+.main .zc form .w3 ul{
+	display: inline-block;
+}
+.main .zc form .w3 li{
+	float: left;
+	font-size: 12px;
+	color: gray;
+}
+.main .zc form .w3 li a{
+	color: gray;
+}
+.main .zc form .w3 li a:hover{
+	color: #000000;
+}
+.main .zc form #sub{
+	width: 271px;
+	height: 37px;
+	background: #e31436;
+	margin-left: 40px;
+	margin-top: -5px;
+	outline: none;
+	border: none;
+	color: #fff;
+}
+.main .zc form #s1{
+	width: 100px;
+	margin: 5px 40px;
+}
+.main .zc form #s2{
+	width: 100px;
+	margin: 5px 40px;
+}
+.main .zc form #s3{
+	width: 100px;
+	margin: 5px 40px;
+}
+.footer{
+	width: 100%;
+	height: 255px;
+	margin-top: 20px;
+}
+.footer .ww{
+	padding: 20px;
+	margin: 0 auto;
+	height: 20px;
+	width: 1000px;
+}
+.footer .ww li{
+	float: left;
+	width: 110px;
+	height: 20px;
+	border-right: 1px solid #000000;
+	line-height: 20px;
+	text-align: center;
+}
+.footer .ww li:hover a{
+	color:gray ;
+}
+.footer .ww li a{
+	color: #000;
+	font-size: 14px;
+}
+.footer .last1{
+	width: 900px;
+	margin: 0 auto;
+}
+.footer .last1 span{
+	font-size: 13px;
+	color: gray;
+}
+.footer .last2{
+	width: 900px;
+	margin-left: 300px;
+	margin-top: 10px;
+}
+.footer .last2 span{
+	font-size: 11px;
+	color: gray;
+}
+.footer .last3{
+	margin-left: 600px;
+	margin-top: 10px;
+}
