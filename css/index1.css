@@ -107,7 +107,7 @@ html,body{
 	overflow: hidden;
 }
 .main .banner .box #u li:hover{
-	background: gray;
+	background: grey;
 }
 .main .banner .box #u li{
 	color: #000000;
@@ -264,6 +264,7 @@ html,body{
 	text-align: center;
 	border-bottom: 1px solid gray;
 	height: 46px;
+	line-height: 46px;
 }
 .banner .daohang3 li a{
 	color: #fff;

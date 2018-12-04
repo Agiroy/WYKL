@@ -52,12 +52,11 @@ $dh.mouseover(function(){
 }).mouseout(function(){
 	$odv.hide();
 	$(".daohang3").hide();
-}.bind(this));
+});
 $odv.mouseover(function(){
 	$(".daohang3").show();
-	$odv.show();
+	$(this).show();
 	//console.log(1)
-	$dh.show();
 }).mouseout(function(){
 	$odv.hide();
 	$(".daohang3").hide();

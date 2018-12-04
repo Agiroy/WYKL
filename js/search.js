@@ -38,7 +38,7 @@ txt.onkeyup = function(){
 		}
 	}
 	
-	var url = location.href;
-	var str = url.split("=")[1];
-	//console.log(str);
-$(".qq").eq(0).html(str).css({"color":"gray","font-size":"12px"}).next(".qq").html("欢迎您").css({"color":"gray","font-size":"12px"});
+//	var url = location.href;
+//	var str = url.split("=")[1];
+//	//console.log(str);
+//$(".qq").eq(0).html(str).css({"color":"gray","font-size":"12px"}).next(".qq").html("欢迎您").css({"color":"gray","font-size":"12px"});
