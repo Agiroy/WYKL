@@ -38,6 +38,10 @@ txt.onkeyup = function(){
 		}
 	}
 	
+$(".active li").click(function(){
+	location.href="http://127.0.0.1/WYKL/html/xiangqing.html";
+})
+
 //	var url = location.href;
 //	var str = url.split("=")[1];
 //	//console.log(str);
