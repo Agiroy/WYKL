@@ -254,3 +254,52 @@ $(".c9 img").on("click",function(){
 //			showcart();
 //			}.bind(this))
 		});
+
+
+	if(localStorage.userName) {
+	var str = localStorage.userName;
+	//console.log(str);
+	$(".qq").eq(0).html(str).css({
+		"color": "gray",
+		"font-size": "12px"
+	});
+	$(".qq").eq(1).html("欢迎您").css({
+		"color": "gray",
+		"font-size": "12px"
+	})
+	$(".qq").eq(2).html("退出登录").css({
+		"color": "gray",
+		"fontSize": "12px"
+	});
+}
+
+$(".qq").eq(2).click(function() {
+	localStorage.clear();
+	$(".qq").eq(0).html("登录").css({
+		"color": "gray",
+		"font-size": "12px"
+	});
+	$(".qq").eq(1).html("免费注册").css({
+		"color": "gray",
+		"font-size": "12px"
+	});
+	$(".qq").eq(2).html("手机考拉").css({
+		"color": "gray",
+		"font-size": "12px"
+	});
+})
+
+$(".qq").eq(0).click(function(){
+	if (localStorage.userName) {
+		return false;
+	}else{
+		location.href="http://127.0.0.1/WYKL/html/login.html";
+	}
+})
+$(".qq").eq(1).click(function(){
+	if (localStorage.userName) {
+		return false
+	}else{
+		location.href="http://127.0.0.1/WYKL/html/register.html";
+	}
+})
